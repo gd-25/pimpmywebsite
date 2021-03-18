@@ -13,8 +13,8 @@ export default function ProjectPreview(prop) {
    const [hovering, setHovering] = useState(false);
 
    return (
-      <div className="relative item1" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-         <img src={prop.src} className={hovering ? "cursor-pointer opacity-10" : "cursor-pointer"} />
+      <div className="relative item1" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} >
+         <img src={prop.src} className={hovering ? "cursor-pointer opacity-10" : "cursor-pointer"} onLoad={prop.toDoWhenLoaded} />
          <div className={hovering ? "absolute top-0 w-full h-full flex-col-center" : "opacity-0 absolute top-0 w-full h-full flex-col-center"}>
 
             <div className="w-full text-center">
@@ -32,6 +32,12 @@ export default function ProjectPreview(prop) {
                <p className="rounded-lg bg-blue-300 text-center px-2 mx-1">express</p>
                <p className="rounded-lg bg-pink-300 text-center px-2 mx-1">react</p>
                <p className="rounded-lg bg-yellow-300 text-center px-2 mx-1">node.js</p>
+            </div>}
+
+            {prop.react && <div className="flex-center text-sm">
+               <p className="rounded-lg bg-pink-300 text-center px-2 mx-1">react</p>
+               <p className="rounded-lg bg-yellow-300 text-center px-2 mx-1">node.js</p>
+               <p className="rounded-lg bg-blue-300 text-center px-2 mx-1">animations</p>
             </div>}
 
             {prop.woo && <div className="flex-center text-sm">
@@ -55,8 +61,13 @@ export default function ProjectPreview(prop) {
             {prop.href && <div>
                <div className="h-3" />
                <button>
-                  <a href={prop.href} target="_blank" className="">visit website</a>
+                  <a href={prop.href} className="">visit website</a>
                </button>
+            </div>}
+
+            {prop.tobepublished &&  <div>
+               <div className="h-3" />
+               <div>live April 2021</div>
             </div>}
 
          </div>

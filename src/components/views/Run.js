@@ -178,7 +178,8 @@ export default function Run() {
                   {(!img1loaded || !img2loaded || !img3loaded || !img4loaded || !img5loaded || !img6loaded || !img7loaded || !img8loaded || !img9loaded)
                      ? <div className="flex-col-center">
                         <div className="text-5xl font-bold focus:outline-none">LOADING...</div>
-                        <p className="w-104 text-center">Depending on your brower's connexion, this may take a few seconds.</p>
+                        <div className="h-2" />
+                        <p className="w-104 text-center">Depending on your WiFi connexion, this may take a few seconds.</p>
                      </div>
                      : <button className="text-9xl font-bold focus:outline-none" onClick={launchRace}>PLAY</button>}
 

@@ -3,11 +3,11 @@ import './../../styles/index.css';
 
 import GD from './../../assets/websites/GD.png'
 import AGORA from './../../assets/websites/AGORA.png'
+import SPC from './../../assets/websites/SPC.png'
 import MH from './../../assets/websites/MH.png'
 import PAON from './../../assets/websites/PAON.png'
 import TEDx from './../../assets/websites/TEDx.png'
-import EI from './../../assets/websites/EI.png'
-import HM from './../../assets/websites/HM.png'
+
 
 import ProjectPreview from './../utils/ProjectPreview'
 import Navbar from './../utils/Navbar'
@@ -34,11 +34,16 @@ export default function Landing() {
       }
    }, [])
 
-  
+   const [img1loaded, setImg1loaded] = useState(false);
+   const [img2loaded, setImg2loaded] = useState(false);
+   const [img3loaded, setImg3loaded] = useState(false);
+   const [img4loaded, setImg4loaded] = useState(false);
 
 
    return (
-      <div className="w-full overflow-x-hidden z-50">
+      <div className={(!img1loaded || !img2loaded || !img3loaded || !img4loaded)
+         ? "opacity-0 w-full overflow-x-hidden z-50"
+         : "w-full overflow-x-hidden z-50"}>
 
          <Navbar />
 
@@ -56,12 +61,12 @@ export default function Landing() {
          <div className="relative w-full flex justify-start ">
             <div className="running-animal-superslow flex-none" style={{ WebkitAnimationPlayState: paused }}>
                <img src={winnerRunningSrc} className={(paused === "paused") ? "inline-block opacity-0 h-20 object-contain" : "inline-block h-20 object-contain"} style={{ WebkitAnimationPlayState: paused }} />
-               
+
             </div>
 
             <div className="absolute top-0 running-animal-superslow flex-none" style={{ WebkitAnimationPlayState: paused }}>
                <img src={winnerStillSrc} className={(paused === "paused") ? "inline-block h-20 object-contain" : "inline-block opacity-0 h-20 object-contain"} />
-               
+
 
             </div>
 
@@ -76,26 +81,37 @@ export default function Landing() {
                   <ProjectPreview src={PAON} href="https://joinpaon.com" html
                      title="PAON"
                      line1="An online platform"
-                     line2="landing page." />
+                     line2="landing page."
+                     toDoWhenLoaded={() => setImg1loaded(true)} />
 
                   <ProjectPreview src={TEDx} href="https://tedxessecbusinessschool.fr" html
                      title="TEDxESSEC"
-                     line1="A TEDx event website" />
+                     line1="A privileged digital"
+                     line2="access to conferences."
+                     toDoWhenLoaded={() => setImg2loaded(true)} />
 
                   <ProjectPreview src={GD} href="https://gasparddeshusses.com" mern
                      title="GASPARD DESHUSSES"
-                     line1="An art gallery website"
-                     line2="with an integrated eshop." />
+                     line1="An online art gallery"
+                     line2="with an integrated eshop."
+                     toDoWhenLoaded={() => setImg3loaded(true)} />
+
+                  <ProjectPreview src={SPC} react tobepublished
+                     title="SIX PAIRE CREATIVE"
+                     line1="An interactive portfolio"
+                     line2="for two French publicists."
+                     toDoWhenLoaded={() => setImg4loaded(true)} />
 
                   <ProjectPreview src={AGORA} href="https://agoraicp.fr" wp
                      title="AGORA ICP"
                      line1="A student-ran"
-                     line2="media website." />
+                     line2="news outlet."
+                  />
 
                   <ProjectPreview src={MH} href="https://maisonhouni.com" woo
                      title="MAISON HOUNI"
-                     line1="An online boutique"
-                     line2="eshop and showroom." />
+                     line1="A clothing and"
+                     line2="accessories brand eshop." />
 
                   <ProjectPreview src={PAON} href="https://joinpaon.com" html
                      title="PAON"
@@ -104,22 +120,29 @@ export default function Landing() {
 
                   <ProjectPreview src={TEDx} href="https://tedxessecbusinessschool.fr" html
                      title="TEDxESSEC"
-                     line1="A TEDx event website" />
+                     line1="A privileged digital"
+                     line2="access to conferences." />
 
                   <ProjectPreview src={GD} href="https://gasparddeshusses.com" mern
                      title="GASPARD DESHUSSES"
-                     line1="An art gallery website"
+                     line1="An online art gallery"
                      line2="with an integrated eshop." />
+
+                  <ProjectPreview src={SPC} react tobepublished
+                     title="SIX PAIRE CREATIVE"
+                     line1="An interactive portfolio"
+                     line2="for two French publicists." />
 
                   <ProjectPreview src={AGORA} href="https://agoraicp.fr" wp
                      title="AGORA ICP"
                      line1="A student-ran"
-                     line2="media website." />
+                     line2="news outlet."
+                  />
 
                   <ProjectPreview src={MH} href="https://maisonhouni.com" woo
                      title="MAISON HOUNI"
-                     line1="An online boutique"
-                     line2="eshop and showroom." />
+                     line1="A clothing and"
+                     line2="accessories brand eshop." />
 
                   <ProjectPreview src={PAON} href="https://joinpaon.com" html
                      title="PAON"
@@ -128,22 +151,32 @@ export default function Landing() {
 
                   <ProjectPreview src={TEDx} href="https://tedxessecbusinessschool.fr" html
                      title="TEDxESSEC"
-                     line1="A TEDx event website" />
+                     line1="A privileged digital"
+                     line2="access to conferences." />
 
                   <ProjectPreview src={GD} href="https://gasparddeshusses.com" mern
                      title="GASPARD DESHUSSES"
-                     line1="An art gallery website"
+                     line1="An online art gallery"
                      line2="with an integrated eshop." />
+
+                  <ProjectPreview src={SPC} react tobepublished
+                     title="SIX PAIRE CREATIVE"
+                     line1="An interactive portfolio"
+                     line2="for two French publicists." />
 
                   <ProjectPreview src={AGORA} href="https://agoraicp.fr" wp
                      title="AGORA ICP"
                      line1="A student-ran"
-                     line2="media website." />
+                     line2="news outlet."
+                  />
 
                   <ProjectPreview src={MH} href="https://maisonhouni.com" woo
                      title="MAISON HOUNI"
-                     line1="An online boutique"
-                     line2="eshop and showroom." />
+                     line1="A clothing and"
+                     line2="accessories brand eshop." />
+
+
+
                </span>
 
 
