@@ -49,14 +49,24 @@ export default function Run() {
    const [sheepClass, setSheepClass] = useState("running-animal-slow h-full object-contain relative z-40");
    const [tigerClass, setTigerClass] = useState("running-animal-mid h-full object-contain relative z-40");
 
+   const [img1loaded, setImg1loaded] = useState(false);
+   const [img2loaded, setImg2loaded] = useState(false);
+   const [img3loaded, setImg3loaded] = useState(false);
+   const [img4loaded, setImg4loaded] = useState(false);
+   const [img5loaded, setImg5loaded] = useState(false);
+   const [img6loaded, setImg6loaded] = useState(false);
+   const [img7loaded, setImg7loaded] = useState(false);
+   const [img8loaded, setImg8loaded] = useState(false);
+   const [img9loaded, setImg9loaded] = useState(false);
+
 
    const choosingWinner = (e, setWinnerClass) => {
-         setWinnerClass("running-animal-fastest h-full object-contain relative z-40");
-         setIntroPassed(true);
-         localStorage.setItem("winnerId", e.target.id)
-         localStorage.setItem("winnerRunningSrc", e.target.getAttribute("runningsrc"))
-         localStorage.setItem("winnerStillSrc", e.target.getAttribute("stillsrc"))
-         setWinnerName(e.target.getAttribute("runningsrc"))
+      setWinnerClass("running-animal-fastest h-full object-contain relative z-40");
+      setIntroPassed(true);
+      localStorage.setItem("winnerId", e.target.id)
+      localStorage.setItem("winnerRunningSrc", e.target.getAttribute("runningsrc"))
+      localStorage.setItem("winnerStillSrc", e.target.getAttribute("stillsrc"))
+      setWinnerName(e.target.getAttribute("runningsrc"))
    }
 
    const launchRace = () => {
@@ -64,7 +74,7 @@ export default function Run() {
       setTimeout(() => setWinner(true), 2800)
    }
 
-   
+
 
 
    return (
@@ -90,79 +100,88 @@ export default function Run() {
                      <img src={winnerName} className="h-56 object-contain" />
                   </div>
                   : <div className="h-screen flex-col-center w-full">
-                     <div className="relative border-b border-black w-full h-1/9 pl-5">
-                        <img src={BUFFALOSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={BUFFALO} className={running ? buffaloClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9 pl-5">
-                        <img src={COWSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={COW} className={running ? cowClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9 pl-5">
-                        <img src={DONKEYSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={DONKEY} className={running ? donkeyClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9 pl-14">
-                        <img src={LAMASTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={LAMA} className={running ? lamaClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9">
-                        <img src={LIONSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={LION} className={running ? lionClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9">
-                        <img src={MONKEYSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={MONKEY} className={running ? monkeyClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
 
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9 pl-4">
-                        <img src={PIKACHUSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={PIKACHU} className={running ? pikachuClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
 
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9 pl-4">
-                        <img src={SHEEPSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={SHEEP} className={running ? sheepClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                     <div className={(img1loaded && img2loaded && img3loaded && img4loaded && img5loaded && img6loaded && img7loaded && img8loaded && img9loaded) ? "h-screen flex-col-center w-full" : "opacity-0 h-screen flex-col-center w-full"}>
+                        <div className="relative border-b border-black w-full h-1/9 pl-5">
+                           <img src={BUFFALOSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={BUFFALO} className={running ? buffaloClass : "opacity-0"} onLoad={() => setImg1loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9 pl-5">
+                           <img src={COWSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={COW} className={running ? cowClass : "opacity-0"} onLoad={() => setImg2loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9 pl-5">
+                           <img src={DONKEYSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={DONKEY} className={running ? donkeyClass : "opacity-0"} onLoad={() => setImg3loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9 pl-14">
+                           <img src={LAMASTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={LAMA} className={running ? lamaClass : "opacity-0"} onLoad={() => setImg4loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9">
+                           <img src={LIONSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={LION} className={running ? lionClass : "opacity-0"} onLoad={() => setImg5loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9">
+                           <img src={MONKEYSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={MONKEY} className={running ? monkeyClass : "opacity-0"} onLoad={() => setImg6loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
 
-                     </div>
-                     <div className="relative border-b border-black w-full h-1/9">
-                        <img src={TIGERSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
-                        <img src={TIGER} className={running ? tigerClass : "opacity-0"} />
-                        <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
-                        <p className="absolute inset-center  h-full border-l border-black z-10"></p>
-                        <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9 pl-4">
+                           <img src={PIKACHUSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={PIKACHU} className={running ? pikachuClass : "opacity-0"} onLoad={() => setImg7loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
 
-                     </div>
-                  </div>}
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9 pl-4">
+                           <img src={SHEEPSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={SHEEP} className={running ? sheepClass : "opacity-0"} onLoad={() => setImg8loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+
+                        </div>
+                        <div className="relative border-b border-black w-full h-1/9">
+                           <img src={TIGERSTILL} className={running ? "hidden" : "h-full object-contain relative z-40"} />
+                           <img src={TIGER} className={running ? tigerClass : "opacity-0"} onLoad={() => setImg9loaded(true)} />
+                           <p className="absolute top-0 left-0 h-full border-l border-black ml-36 z-10"></p>
+                           <p className="absolute inset-center  h-full border-l border-black z-10"></p>
+                           <p className="absolute top-0 right-0 h-full border-l border-black mr-28 z-10"></p>
+
+                        </div>
+                     </div></div>}
 
 
 
                {(!running && !winner) && <div className="absolute inset-center flex-col-center bg-white p-8 z-50">
-                  <button className="text-9xl font-bold focus:outline-none" onClick={launchRace}>PLAY</button>
+                  {(!img1loaded || !img2loaded || !img3loaded || !img4loaded || !img5loaded || !img6loaded || !img7loaded || !img8loaded || !img9loaded)
+                     ? <div className="flex-col-center">
+                        <div className="text-5xl font-bold focus:outline-none">LOADING...</div>
+                        <p className="w-104 text-center">Depending on your brower's connexion, this may take a few seconds.</p>
+                     </div>
+                     : <button className="text-9xl font-bold focus:outline-none" onClick={launchRace}>PLAY</button>}
+
                </div>}
             </div>
             : <div className="w-full h-screen flex-col-center py-20">

@@ -138,6 +138,10 @@ button:hover {
    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
 }
 
+.btn-green:hover {
+   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
+}
+
 .active-button {
    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
 }
