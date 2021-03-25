@@ -10,7 +10,7 @@ import TEDx from './../../assets/websites/TEDx.png'
 import EI from './../../assets/websites/EI.png'
 import HM from './../../assets/websites/HM.png'
 import COS from './../../assets/websites/COS.png'
-import SEA from './../../assets/images/SEA.jpg'
+import RELIQUE from './../../assets/websites/RELIQUE.png'
 
 import ProjectMini from './../utils/ProjectMini'
 import Navbar from './../utils/Navbar'
@@ -19,7 +19,8 @@ export default function Overview() {
    const [winnerRunningSrc, setWinnerRunningSrc] = useState("");
    const [winnerStillSrc, setWinnerStillSrc] = useState("");
 
-   const [direction, setDirection] = useState(-1)
+   const [direction, setDirection] = useState(1);
+   const [directionMobile, setDirectionMobile] = useState(1);
 
    useEffect(() => {
       const alreadyPlayedWinnerId = localStorage.getItem("winnerId");
@@ -32,44 +33,44 @@ export default function Overview() {
       }
    }, [])
 
-   useEffect(() => {
-      setTimeout(() => setDirection(direction * -1), 12000);
-   }, [direction])
+
 
    return (
-      <div className="w-full">
+      <div className="w-full overflow-x-hidden">
 
          <Navbar />
 
-         <div className="ml-40 pt-32">
-            <h1 className="text-5xl font-black">Hello there!</h1>
+         <div className="px-8 md:pl-40 pt-32">
+            <h1 className="text-5xl font-black">Hello!</h1>
             <div className="h-2" />
-            <p className="w-200">My name is Gregoire, I'm 23 and I am a web developer. I grew up in the French alps and I am currently studying business at ESSEC in Paris.</p>
-
-            <div className="h-2" />
-
-            <p className="w-200">For me, coding is like building virtual houses, and I love building things.</p>
+            <p className="w-80 md:w-200">My name is Gregoire <br className="md:hidden" /> and I am a web developer.<br className="md:hidden" /> I grew up in the French alps and I am currently studying business at ESSEC in Paris.</p>
 
             <div className="h-2" />
 
-            <p className="w-200">I am proficient in React/Node.js and Wordpress and would love to help you renew or build your website.</p>
+            <p className="w-80 md:w-200">For me, coding is like building virtual houses, and I love building things.</p>
 
             <div className="h-2" />
 
-            <p className="w-200">Feel free to reach out using the contact form above!</p>
+            <p className="w-80 md:w-200">I am proficient in React/Node.js and Wordpress and would love to help you renew or build your website.</p>
+
+            <div className="h-2" />
+
+            <p className="w-80 md:w-200">Feel free to reach out using the contact form above!</p>
          </div>
 
+         <div className="h-12" />
 
 
-         <div className="w-full flex h-64 -mt-40">
+
+         <div className="w-full hidden md:flex h-64 -mt-40">
             <div className="w-11/12 border-b border-black h-64"></div>
 
             <div className="relative flex justify-center items-end">
                <div className="absolute top-0 w-56 h-56 border-l-2 border-t-2 border-black z-20" style={{ transform: "scale(1, 0.5) rotate(45deg)", marginTop: "-2.05rem" }}></div>
-               <div className="absolute top-0 mt-20 mr-24 w-20 h-14 border border-black"></div>
+               <div className="absolute top-0 mt-20 md:mr-24 w-20 h-14 border border-black"></div>
                <div className="absolute top-0 mt-20 ml-24 w-14 h-14 border border-black"></div>
 
-               <div className="absolute top-0 mt-44 mr-24 w-20 h-14 border border-black"></div>
+               <div className="absolute top-0 mt-44 md:mr-24 w-20 h-14 border border-black"></div>
                <div className="absolute top-0 mt-44 ml-24 w-10 h-20 border border-black"></div>
 
                <div className="w-64 h-48 border-l border-r border-black bg-white z-10"></div>
@@ -78,8 +79,26 @@ export default function Overview() {
             <div className="w-1/12 border-b border-black h-64 bg-white z-10"></div>
          </div>
 
-         <div className="relative w-full flex justify-start -mt-12">
-            <div className="overview-running-animal flex-none" style={{ transform: `scaleX(${direction})` }}>
+         <div className="w-full flex md:hidden h-32">
+            <div className="w-4/5 border-b border-black h-32"></div>
+
+            <div className="relative flex justify-center items-end">
+               <div className="absolute top-0 w-28 h-28 border-l-2 border-t-2 border-black z-20" style={{ transform: "scale(1, 0.5) rotate(45deg)", marginTop: "-1rem" }}></div>
+
+
+               <div className="w-32 h-24 border-l border-r border-black bg-white z-10"></div>
+            </div>
+
+            <div className="w-1/5 border-b border-black h-32 bg-white z-10"></div>
+         </div>
+
+         <div className="relative w-full hidden md:flex justify-start -mt-12">
+            <div className="overview-running-animal flex-none">
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
                <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
                <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
                <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
@@ -89,15 +108,60 @@ export default function Overview() {
                <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
                <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
             </div>
-
          </div>
 
-         <div className="grid grid-cols-3 px-40 pt-16">
+         <div className="relative w-full hidden md:flex justify-start -mt-12" style={{ transform: "scaleX(-1)" }}>
+            <div className="overview-running-animal-alt flex-none " >
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
+            </div>
+         </div>
+
+         <div className="relative w-full flex md:hidden justify-start -mt-8">
+            <div className="overview-running-animal-mobile flex-none">
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+
+            </div>
+         </div>
+
+         <div className="relative w-full flex md:hidden justify-start -mt-8 " style={{ transform: "scaleX(-1)" }}>
+            <div className="overview-running-animal-mobile-alt flex-none" >
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
+            </div>
+         </div>
+
+         <div className="hidden md:grid grid-cols-2 md:grid-cols-3 px-8 md:px-40 pt-16">
 
             <ProjectMini src={GD} href="https://gasparddeshusses.com" mern
                title="GASPARDDESHUSSES"
                line1="An online art gallery"
                line2="with an integrated eshop." />
+
+            <ProjectMini src={RELIQUE} href="https://relique.paris" wp
+               title="RELIQUE PARIS"
+               line1="A Parisian vintage"
+               line2="store eshop." />
 
             <ProjectMini src={AGORA} href="https://agoraicp.fr" wp
                title="AGORA ICP"

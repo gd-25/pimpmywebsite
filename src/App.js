@@ -9,10 +9,12 @@ import Navbar from './components/utils/Navbar'
 import Footer from './components/utils/Footer'
 import Overview from './components/views/Overview';
 import Contact from './components/views/Contact';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 function App() {
    return (
       <>
+         <ScrollToTop />
          <Switch>
             <Route exact path="/" component={Run}></Route>
             <Route path="/home" component={Landing}></Route>

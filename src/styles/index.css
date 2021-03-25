@@ -38,14 +38,24 @@
 
  .item1 {
    display: inline-flex;
+   height: 150px;
+   width: 240px;
+   vertical-align: top;
+   margin-left: 8px;
+ }
+
+ @media screen and (min-width: 768px) {
+ .item1 {
+   display: inline-flex;
    height: 300px;
    width: 480px;
    vertical-align: top;
    margin-left: 15px;
  }
- 
- /* Transition */
- 
+}
+
+ /* --------------- LANDING --------------- */
+
  @keyframes marquee {
    0% {
      transform: translateX(0%)
@@ -55,7 +65,34 @@
    }
  }
 
+.running-animal-mobile {
+   margin-left: -25%;
+   animation-duration: 15s;
+   animation-name: slideinlandingmobile;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;  
+}
 
+ .running-animal-mobile-one {
+   animation-delay: 1s;
+}
+
+.running-animal-mobile-two {
+   animation-delay: 4s;
+}
+
+.running-animal-mobile-three {
+   animation-delay: 7s;
+}
+
+.running-animal-mobile-four {
+   animation-delay: 10s;
+}
+
+.running-animal-mobile-five {
+   animation-delay: 13s;
+}
 
 
 
@@ -79,9 +116,9 @@
    animation: 3s linear slidein;
 }
 
-.overview-running-animal {
-   animation: 12s linear infinite alternate slideinoverview;
-}
+
+
+
 
 @keyframes moveSlideshow {
    from {
@@ -113,13 +150,72 @@
    }
 }
 
-@keyframes slideinoverview {
+
+
+@keyframes slideinlandingmobile {
    from {
-      margin-left: 80%;
+      margin-left: -25%;
+   }
+
+   16.66666667% {
+      margin-left: 100%;
    }
 
    to {
-      margin-left: -40%;
+      margin-left: 100%;
+   }
+}
+
+
+
+/* --------------- OVERVIEW --------------- */
+.overview-running-animal {
+   animation-duration: 20s;
+   animation-name: slideinoverview;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;  
+}
+
+.overview-running-animal-alt {
+   margin-left: -100%;
+   animation-delay: 6s;
+   animation-duration: 20s;
+   animation-name: slideinoverview;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;  
+}
+
+.overview-running-animal-mobile {
+   animation-duration: 10s;
+   animation-name: slideinoverview;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;  
+}
+
+.overview-running-animal-mobile-alt {
+   margin-left: -100%;
+   animation-delay: 3s;
+   animation-duration: 10s;
+   animation-name: slideinoverview;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-fill-mode: forwards;  
+}
+
+@keyframes slideinoverview {
+   from {
+      margin-left: -100%;
+   }
+
+   50% {
+      margin-left: 100%;
+   }
+
+   to {
+      margin-left: 100%;
    }
 }
 
@@ -194,23 +290,25 @@ input, textarea {
 
 
 .nav-icon {
-   @apply w-8 mx-8;
+   @apply w-8 mx-8 z-50;
 }
 
 .nav-icon-after,
 .nav-icon-before,
 .nav-icon-middle {
-   background-color: white;
+   background-color: black;
    border-radius: 1px;
    content: '';
    display: block;
    height: 4.5px;
    margin: 6.5px 0;
    transition: all .2s ease-in-out;
+   z-index: 50;
 }
 
 .menu {
-   @apply absolute top-0 w-full pt-32 flex-col-center bg-white px-4 py-6 z-20;
+   @apply absolute top-0 w-full flex flex-col justify-start items-center px-4 py-6 z-50;
+   height: 90vh;
    right: -150vw;
    transition: right .2s ease-in-out;
 }
@@ -218,6 +316,8 @@ input, textarea {
 .menu.show {
    @apply right-0;
 }
+
+
 
 @tailwind components;
 @tailwind utilities;

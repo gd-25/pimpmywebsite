@@ -40,8 +40,8 @@ export default function Contact() {
       <>
          <Navbar />
 
-         <div className="w-full md:h-screen flex-center">
-            {confirmation ? <div className="px-8 md:px-0 flex-none w-full sm:w-104 md:w-160 z-50">
+         <div className="w-full md:h-screen flex-center pt-24">
+            {confirmation ? <div className="px-8 md:px-0 flex-none w-full sm:w-104 md:w-160 z-40">
                <p className="text-3xl md:text-5xl font-black">💌 Thanks!</p>
 
                <div className="h-4" />
@@ -66,7 +66,7 @@ export default function Contact() {
                   <div className="col-span-2 md:col-span-1 pr-6 leading-tight pt-1">Message:</div><div className="col-span-6 md:col-span-7 w-full h-40 focus px-2 align-text-top break-normal leading-tight pt-1">{message}</div>
                </div>
 
-            </div> : <form className="w-160 md:border md:border-gray-300 py-4 px-6 z-50" onSubmit={handleSubmit} >
+            </div> : <form className="w-160 md:border md:border-gray-300 py-4 px-6 z-40" onSubmit={handleSubmit} >
 
                   <div className="flex flex-row mb-4 text-3xl self-start">
                      <p className="font-bold">CONTACT</p>

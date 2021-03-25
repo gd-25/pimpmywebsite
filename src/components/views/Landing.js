@@ -7,6 +7,7 @@ import SPC from './../../assets/websites/SPC.png'
 import MH from './../../assets/websites/MH.png'
 import PAON from './../../assets/websites/PAON.png'
 import TEDx from './../../assets/websites/TEDx.png'
+import RELIQUE from './../../assets/websites/RELIQUE.png'
 
 
 import ProjectPreview from './../utils/ProjectPreview'
@@ -48,35 +49,29 @@ export default function Landing() {
          <Navbar />
 
 
-         <div className="h-16" />
+         <div className="h-24 md:h-16" />
 
-         <div className="ml-40 z-50">
-            <h1 className="text-6xl font-black z-50">Feeling inspired?</h1>
+         <div className="px-8 md:pl-40 z-50">
+            <h1 className="text-5xl md:text-6xl font-black z-50 leading-none">Feeling inspired?</h1>
             <div className="h-5" />
-            <h2>Let's build a website people will remember.</h2>
+            <h2>Let's build a website <br className="md:hidden" /> people will remember.</h2>
          </div>
 
          <div className="h-6" />
 
-         <div className="relative w-full flex justify-start ">
+         <div className="relative w-full hidden md:flex justify-start ">
             <div className="running-animal-superslow flex-none" style={{ WebkitAnimationPlayState: paused }}>
-               <img src={winnerRunningSrc} className={(paused === "paused") ? "inline-block opacity-0 h-20 object-contain" : "inline-block h-20 object-contain"} style={{ WebkitAnimationPlayState: paused }} />
+               <img src={winnerRunningSrc} className={(paused === "paused") ? "inline-block opacity-0 h-12 md:h-16 object-contain" : "inline-block h-12 md:h-16 object-contain"} style={{ WebkitAnimationPlayState: paused }} />
 
             </div>
 
             <div className="absolute top-0 running-animal-superslow flex-none" style={{ WebkitAnimationPlayState: paused }}>
-               <img src={winnerStillSrc} className={(paused === "paused") ? "inline-block h-20 object-contain" : "inline-block opacity-0 h-20 object-contain"} />
-
-
+               <img src={winnerStillSrc} className={(paused === "paused") ? "inline-block h-12 md:h-16 object-contain" : "inline-block opacity-0 h-12 md:h-16 object-contain"} />
             </div>
-
-
-
          </div>
 
-
-         <div className="marquee">
-            <div className="marquee-content" onMouseEnter={() => setPaused("paused")} onMouseLeave={() => setPaused("running")}>
+         <div className="hidden md:block marquee">
+            <div className="marquee-content" onMouseEnter={() => setPaused("paused")} onMouseLeave={() => setPaused("running")} >
                <span className="item-collection-1">
                   <ProjectPreview src={PAON} href="https://joinpaon.com" html
                      title="PAON"
@@ -96,11 +91,16 @@ export default function Landing() {
                      line2="with an integrated eshop."
                      toDoWhenLoaded={() => setImg3loaded(true)} />
 
+                  <ProjectPreview src={RELIQUE} href="https://relique.paris" mern
+                     title="RELIQUE PARIS"
+                     line1="A Parisian vintage"
+                     line2="store eshop."
+                     toDoWhenLoaded={() => setImg4loaded(true)} />
+
                   <ProjectPreview src={SPC} react tobepublished
                      title="SIX PAIRE CREATIVE"
                      line1="An interactive portfolio"
-                     line2="for two French publicists."
-                     toDoWhenLoaded={() => setImg4loaded(true)} />
+                     line2="for two French publicists." />
 
                   <ProjectPreview src={AGORA} href="https://agoraicp.fr" wp
                      title="AGORA ICP"
@@ -184,7 +184,59 @@ export default function Landing() {
             <div></div>
          </div>
 
+         <div className="flex-col-center md:hidden">
+            <div className="relative w-full flex justify-start ">
+               <div className="running-animal-mobile running-animal-mobile-one flex-none" >
+                  <img src={winnerRunningSrc} className="inline-block h-16 object-contain" />
+               </div>
+            </div>
 
+            <a href="https://relique.paris" target="_blank">
+                  <img src={RELIQUE} className="w-full object-top h-56 object-cover" />
+            </a>
+
+            <div className="relative pt-4 w-full flex justify-start " style={{ transform: "scaleX(-1)" }}>
+               <div className="running-animal-mobile running-animal-mobile-two flex-none" >
+                  <img src={winnerRunningSrc} className="inline-block h-16 object-contain" />
+               </div>
+            </div>
+
+            <a href="https://relique.paris" target="_blank">
+                  <img src={GD} className="w-full h-56 object-cover border-b border-t border-gray-200" />
+            </a>
+
+            <div className="relative pt-4 w-full flex justify-start ">
+               <div className="running-animal-mobile running-animal-mobile-three flex-none" >
+                  <img src={winnerRunningSrc} className="inline-block h-16 object-contain" />
+               </div>
+            </div>
+
+            <a href="https://relique.paris" target="_blank">
+                  <img src={AGORA} className="w-full h-56 object-top object-cover border-b border-t border-gray-200" />
+            </a>
+
+            <div className="relative pt-4 w-full flex justify-start " style={{ transform: "scaleX(-1)" }}>
+               <div className="running-animal-mobile running-animal-mobile-four flex-none" >
+                  <img src={winnerRunningSrc} className="inline-block h-16 object-contain" />
+               </div>
+            </div>
+
+            <a href="https://relique.paris" target="_blank">
+                  <img src={MH} className="w-full h-56 object-top object-cover" />
+            </a>
+
+            <div className="relative pt-4 w-full flex justify-start ">
+               <div className="running-animal-mobile running-animal-mobile-five flex-none" >
+                  <img src={winnerRunningSrc} className="inline-block h-16 object-contain" />
+               </div>
+            </div>
+
+            <a href="https://relique.paris" target="_blank">
+                  <img src={SPC} className="w-full h-56 object-top object-cover" />
+            </a>
+
+
+         </div>
       </div>
    );
 }

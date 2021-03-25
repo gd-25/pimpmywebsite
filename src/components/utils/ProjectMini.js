@@ -13,7 +13,8 @@ export default function ProjectMini(prop) {
    const [hovering, setHovering] = useState(false);
 
    return (
-      <div className="relative m-2" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
+      <a href={prop.href} target="_blank">
+         <div className="relative m-2" onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
          <img src={prop.src} className={hovering ? "cursor-pointer opacity-10" : "cursor-pointer"} />
          <div className={hovering ? "absolute top-0 w-full h-full flex-col-center" : "opacity-0 absolute top-0 w-full h-full flex-col-center"}>
 
@@ -58,13 +59,6 @@ export default function ProjectMini(prop) {
             </div>}
 
 
-            {prop.href && <div>
-               <div className="h-3" />
-               <button>
-                  <a href={prop.href} className="">visit website</a>
-               </button>
-            </div>}
-
             {prop.tobepublished &&  <div>
                <div className="h-3" />
                <div>live April 2021</div>
@@ -72,5 +66,6 @@ export default function ProjectMini(prop) {
 
          </div>
       </div>
+      </a>
    );
 }
