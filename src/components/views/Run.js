@@ -68,6 +68,7 @@ export default function Run() {
       localStorage.setItem("winnerRunningSrc", e.target.getAttribute("runningsrc"))
       localStorage.setItem("winnerStillSrc", e.target.getAttribute("stillsrc"))
       setWinnerName(e.target.getAttribute("runningsrc"))
+      window.scrollTo(0, 0);
    }
 
    const launchRace = () => {
@@ -236,7 +237,8 @@ export default function Run() {
                {(!running && !winner && window.innerWidth > 768) && <div className="absolute inset-center flex-col-center bg-white p-8 z-50">
                   {(!img1loaded || !img2loaded || !img3loaded || !img4loaded || !img5loaded || !img6loaded || !img7loaded || !img8loaded || !img9loaded)
                      ? <div className="flex-col-center">
-                        <div className="text-5xl font-bold focus:outline-none">LOADING <img src={HEARTS} /></div>
+                        <div className="text-5xl font-bold focus:outline-none">LOADING...</div>
+                        <img src={HEARTS} className="h-10 object-contain" />
                         <div className="h-2" />
                         <p className="w-104 text-center">Depending on your internet connexion, this may take a few seconds.</p>
                      </div>

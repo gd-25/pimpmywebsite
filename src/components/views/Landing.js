@@ -201,7 +201,7 @@ export default function Landing() {
                </div>
             </div>
 
-            <a href="https://relique.paris" target="_blank">
+            <a href="https://gasparddeshusses.com" target="_blank">
                   <img src={GD} className="w-full h-56 object-cover border-b border-t border-gray-200" />
             </a>
 
@@ -211,7 +211,7 @@ export default function Landing() {
                </div>
             </div>
 
-            <a href="https://relique.paris" target="_blank">
+            <a href="https://agoraicp.fr" target="_blank">
                   <img src={AGORA} className="w-full h-56 object-top object-cover border-b border-t border-gray-200" />
             </a>
 
@@ -221,7 +221,7 @@ export default function Landing() {
                </div>
             </div>
 
-            <a href="https://relique.paris" target="_blank">
+            <a href="https://maisonhouni.com" target="_blank">
                   <img src={MH} className="w-full h-56 object-top object-cover" />
             </a>
 
@@ -231,7 +231,7 @@ export default function Landing() {
                </div>
             </div>
 
-            <a href="https://relique.paris" target="_blank">
+            <a href="/" target="_blank">
                   <img src={SPC} className="w-full h-56 object-top object-cover" />
             </a>
 
