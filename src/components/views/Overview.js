@@ -168,7 +168,7 @@ export default function Overview() {
                line1="A student-ran"
                line2="news outlet." />
 
-            <ProjectMini src={SPC} react tobepublished
+            <ProjectMini src={SPC} href="https://six-pairecreative.com" react
                title="SIX PAIRE CREATIVE"
                line1="An interactive portfolio"
                line2="for two French publicists." />

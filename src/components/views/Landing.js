@@ -97,7 +97,7 @@ export default function Landing() {
                      line2="store eshop."
                      toDoWhenLoaded={() => setImg4loaded(true)} />
 
-                  <ProjectPreview src={SPC} react tobepublished
+                  <ProjectPreview src={SPC} href="https://six-pairecreative.com" react
                      title="SIX PAIRE CREATIVE"
                      line1="An interactive portfolio"
                      line2="for two French publicists." />
@@ -128,7 +128,7 @@ export default function Landing() {
                      line1="An online art gallery"
                      line2="with an integrated eshop." />
 
-                  <ProjectPreview src={SPC} react tobepublished
+                  <ProjectPreview src={SPC} href="https://six-pairecreative.com" react
                      title="SIX PAIRE CREATIVE"
                      line1="An interactive portfolio"
                      line2="for two French publicists." />
@@ -159,7 +159,7 @@ export default function Landing() {
                      line1="An online art gallery"
                      line2="with an integrated eshop." />
 
-                  <ProjectPreview src={SPC} react tobepublished
+                  <ProjectPreview src={SPC} href="https://six-pairecreative.com" react
                      title="SIX PAIRE CREATIVE"
                      line1="An interactive portfolio"
                      line2="for two French publicists." />
