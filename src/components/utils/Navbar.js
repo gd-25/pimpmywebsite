@@ -32,56 +32,47 @@ export default function Navbar() {
                <button>home</button>
             </NavLink>
 
-            <NavLink to="/overview"
-               className="mx-3 focus:outline-none"
-               activeClassName="active-button focus:outline-none">
-               <button>overview</button>
-            </NavLink>
-
-            <NavLink to="/contact"
+            <NavLink to="/about"
                className="ml-3 mr-10 focus:outline-none"
                activeClassName="active-button focus:outline-none">
-               <button>contact</button>
+               <button>about</button>
             </NavLink>
+
          </div>}
 
-         {(window.innerWidth <= 768) && <div>
-            <div className={(location === "/") ? "z-0 opacity-0 md:hidden" : "nav-icon md:hidden"} onClick={toggleMenu}>
-               <div className="nav-icon-before"></div>
-               <div className="nav-icon-middle"></div>
-               <div className="nav-icon-after"></div>
-            </div>
+         {
+            (window.innerWidth <= 768) && <div>
+               <div className={(location === "/") ? "z-0 opacity-0 md:hidden" : "nav-icon md:hidden"} onClick={toggleMenu}>
+                  <div className="nav-icon-before"></div>
+                  <div className="nav-icon-middle"></div>
+                  <div className="nav-icon-after"></div>
+               </div>
 
-            <div className={`menu fixed bg-white w-2/3 mt-24 z-50 ${menuOpen ? 'show' : ''}`}>
-               <NavLink to="/home"
-                  className="mx-3 focus:outline-none"
-                  activeClassName="hidden">
-                  <button className="text-3xl font-bold py-2">home</button>
-               </NavLink>
+               <div className={`menu fixed bg-white w-2/3 mt-24 z-50 ${menuOpen ? 'show' : ''}`}>
+                  <NavLink to="/home"
+                     className="mx-3 focus:outline-none"
+                     activeClassName="hidden">
+                     <button className="text-3xl font-bold py-2">home</button>
+                  </NavLink>
 
-               <NavLink to="/overview"
-                  className="mx-3 focus:outline-none"
-                  activeClassName="active-button focus:outline-none">
-                  <button className="text-3xl font-bold py-2">overview</button>
-               </NavLink>
+                  <NavLink to="/about"
+                     className="mx-3 focus:outline-none"
+                     activeClassName="active-button focus:outline-none">
+                     <button className="text-3xl font-bold py-2">about</button>
+                  </NavLink>
 
-               <NavLink to="/contact"
-                  className="focus:outline-none"
-                  activeClassName="active-button focus:outline-none">
-                  <button className="text-3xl font-bold py-2">contact</button>
-               </NavLink>
-
-               <a href="/"
-                  className="focus:outline-none flex-col-center">
-                  <button className="text-xs font-bold mt-8 active-button">want to go</button>
-                  <button className="text-xs font-bold active-button focus:outline-none">for another race?</button>
-               </a>
-            </div></div>}
+                  <a href="/"
+                     className="focus:outline-none flex-col-center">
+                     <button className="text-xs font-bold mt-8 active-button">want to go</button>
+                     <button className="text-xs font-bold active-button focus:outline-none">for another race?</button>
+                  </a>
+               </div></div>
+         }
 
 
 
 
 
-      </div>
+      </div >
    );
 }

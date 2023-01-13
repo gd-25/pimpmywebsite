@@ -16,13 +16,18 @@ export default function Footer() {
          <div className="h-2" />
          <div className="flex-center">
             <a href="https://linkedin.com/in/gregoiredeshusses" target="_blank">
-               <button className="w-16 h-16 flex-center">
-                  <img src={LI} className="h-12 object-contain"></img>
+               <button className="mx-1 w-14 h-14 flex-center">
+                  <img src={LI} className="h-11 object-contain"></img>
                </button>
             </a>
             <a href="https://instagram.com/pimpmywebsite" target="_blank">
-               <button className="w-16 h-16 flex-center">
-                  <img src={IG} className="h-14 object-contain"></img>
+               <button className="mx-1 w-14 h-14 flex-center">
+                  <img src={IG} className="h-12 object-contain"></img>
+               </button>
+            </a>
+            <a href="mailto:gregoire@pimpmywebsite.fr" target="_blank">
+               <button className="ml-1.5 mr-1 w-14 h-14 flex-center">
+                  <img src={MAIL} className="h-14 object-contain"></img>
                </button>
             </a>
          </div>

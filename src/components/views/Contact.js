@@ -68,45 +68,45 @@ export default function Contact() {
 
             </div> : <form className="w-160 md:border md:border-gray-300 py-4 px-6 z-40" onSubmit={handleSubmit} >
 
-                  <div className="flex flex-row mb-4 text-3xl self-start">
-                     <p className="font-bold">CONTACT</p>
-                  </div>
+               <div className="flex flex-row mb-4 text-3xl self-start">
+                  <p className="font-bold">CONTACT</p>
+               </div>
 
-                  <div className="flex flex-col">
-                     <label className="text-sm font-bold">Name</label>
-                     <input onChange={(e) => setName(e.target.value)} className="h-8 focus pl-2" value={name}></input>
-                  </div>
+               <div className="flex flex-col">
+                  <label className="text-sm font-bold">Name</label>
+                  <input onChange={(e) => setName(e.target.value)} className="h-8 focus pl-2" value={name}></input>
+               </div>
 
-                  <div className="h-2"></div>
+               <div className="h-2"></div>
 
-                  <div className="flex flex-col">
-                     <label className="text-sm font-bold">Email address <span className="font-black text-red-600">*</span></label>
-                     <input onChange={(e) => setEmail(e.target.value)} type="email" required className="h-8 focus pl-2" value={email}></input>
-                  </div>
+               <div className="flex flex-col">
+                  <label className="text-sm font-bold">Email address <span className="font-black text-red-600">*</span></label>
+                  <input onChange={(e) => setEmail(e.target.value)} type="email" required className="h-8 focus pl-2" value={email}></input>
+               </div>
 
-                  <div className="h-2"></div>
+               <div className="h-2"></div>
 
-                  <div className="flex flex-col justify-start">
-                     <label className="text-sm font-bold">Subject</label>
-                     <input onChange={(e) => setSubject(e.target.value)} className="h-8 focus pl-2 lowercase" value={subject}></input>
-                  </div>
+               <div className="flex flex-col justify-start">
+                  <label className="text-sm font-bold">Subject</label>
+                  <input onChange={(e) => setSubject(e.target.value)} className="h-8 focus pl-2 lowercase" value={subject}></input>
+               </div>
 
-                  <div className="h-2"></div>
+               <div className="h-2"></div>
 
-                  <div className="flex flex-col justify-start">
-                     <label className="text-sm font-bold">Message <span className="font-black text-red-600">*</span></label>
-                     <textarea onChange={(e) => setMessage(e.target.value)} required className="w-full h-40 focus px-2 align-text-top break-normal leading-tight pt-1" value={message}></textarea>
-                  </div>
+               <div className="flex flex-col justify-start">
+                  <label className="text-sm font-bold">Message <span className="font-black text-red-600">*</span></label>
+                  <textarea onChange={(e) => setMessage(e.target.value)} required className="w-full h-40 focus px-2 align-text-top break-normal leading-tight pt-1" value={message}></textarea>
+               </div>
 
-                  <div className="h-6"></div>
+               <div className="h-6"></div>
 
-                  <div className="w-full flex-center">
-                     <button id="submitButton" type="submit" disabled={formDisabled} className="text-xl font-bold py-2">
-                        {formDisabled ? <span>SENDING...</span> : <span>SEND MESSAGE</span>}
-                     </button>
-                  </div>
+               <div className="w-full flex-center">
+                  <button id="submitButton" type="submit" disabled={formDisabled} className="text-xl font-bold py-2">
+                     {formDisabled ? <span>SENDING...</span> : <span>SEND MESSAGE</span>}
+                  </button>
+               </div>
 
-               </form>}
+            </form>}
          </div>
          <div className="h-20 md:h-0"></div>
 

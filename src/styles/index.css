@@ -1,25 +1,24 @@
 /* ./src/index.css */
 
-
 .marquee {
-   width: 100%;
-   height: 300px;
-   margin: 0 auto;
-   overflow: hidden;
-   white-space: nowrap;
- }
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
- .marquee-content:hover {
-   animation-play-state: paused
- }
- 
- .marquee-content {
-   display: inline-block;
-   margin-top: 1px;
-   animation: marquee 90s linear infinite;
- }
+.marquee-content:hover {
+  animation-play-state: paused;
+}
 
- /*
+.marquee-content {
+  display: inline-block;
+  margin-top: 1px;
+  animation: marquee 90s linear infinite;
+}
+
+/*
  .item-collection-1 {
    position: relative;
    left: 0%;
@@ -36,288 +35,307 @@
  }
  */
 
- .item1 {
-   display: inline-flex;
-   height: 150px;
-   width: 240px;
-   vertical-align: top;
-   margin-left: 8px;
- }
-
- @media screen and (min-width: 768px) {
- .item1 {
-   display: inline-flex;
-   height: 300px;
-   width: 480px;
-   vertical-align: top;
-   margin-left: 15px;
- }
+.item1 {
+  display: inline-flex;
+  height: 150px;
+  width: 240px;
+  vertical-align: top;
+  margin-left: 8px;
 }
 
- /* --------------- LANDING --------------- */
+@media screen and (min-width: 768px) {
+  .item1 {
+    display: inline-flex;
+    height: 300px;
+    width: 480px;
+    vertical-align: top;
+    margin-left: 15px;
+  }
+}
 
- @keyframes marquee {
-   0% {
-     transform: translateX(0%)
-   }
-   100% {
-     transform: translateX(-100%)
-   }
- }
+/* --------------- LANDING --------------- */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .running-animal-mobile {
-   margin-left: -25%;
-   animation-duration: 15s;
-   animation-name: slideinlandingmobile;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;  
+  margin-left: -25%;
+  animation-duration: 15s;
+  animation-name: slideinlandingmobile;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
- .running-animal-mobile-one {
-   animation-delay: 1s;
+.running-animal-mobile-one {
+  animation-delay: 1s;
 }
-
 .running-animal-mobile-two {
-   animation-delay: 4s;
+  animation-delay: 4s;
 }
-
 .running-animal-mobile-three {
-   animation-delay: 7s;
+  animation-delay: 7s;
 }
-
 .running-animal-mobile-four {
-   animation-delay: 10s;
+  animation-delay: 10s;
 }
-
 .running-animal-mobile-five {
-   animation-delay: 13s;
+  animation-delay: 13s;
 }
-
-
+.running-animal-mobile-six {
+  animation-delay: 16s;
+}
+.running-animal-mobile-seven {
+  animation-delay: 19s;
+}
+.running-animal-mobile-eight {
+  animation-delay: 22s;
+}
+.running-animal-mobile-nine {
+  animation-delay: 25s;
+}
+.running-animal-mobile-ten {
+  animation-delay: 28s;
+}
+.running-animal-mobile-eleven {
+  animation-delay: 31s;
+}
+.running-animal-mobile-twelve {
+  animation-delay: 34s;
+}
 
 .running-animal-superslow {
-   animation: 12s linear infinite slideinlanding;
+  animation: 12s linear infinite slideinlanding;
 }
 
 .running-animal-slow {
-   animation: 4.5s linear slidein;
+  animation: 4.5s linear slidein;
 }
 
 .running-animal-mid {
-   animation: 4s linear slidein;
+  animation: 4s linear slidein;
 }
 
 .running-animal-fast {
-   animation: 3.5s linear slidein;
+  animation: 3.5s linear slidein;
 }
 
 .running-animal-fastest {
-   animation: 3s linear slidein;
+  animation: 3s linear slidein;
 }
 
-
-
-
-
 @keyframes moveSlideshow {
-   from {
-      margin-left: 0%;
-   }
+  from {
+    margin-left: 0%;
+  }
 
-   to {
-      margin-left: -300%;
-   }
- }
+  to {
+    margin-left: -300%;
+  }
+}
 
 @keyframes slidein {
-   from {
-      margin-left: 0%;
-   }
+  from {
+    margin-left: 0%;
+  }
 
-   to {
-      margin-left: 110%;
-   }
+  to {
+    margin-left: 110%;
+  }
 }
 
 @keyframes slideinlanding {
-   from {
-      margin-left: -10%;
-   }
+  from {
+    margin-left: -10%;
+  }
 
-   to {
-      margin-left: 100%;
-   }
+  to {
+    margin-left: 100%;
+  }
 }
-
-
 
 @keyframes slideinlandingmobile {
-   from {
-      margin-left: -25%;
-   }
+  from {
+    margin-left: -25%;
+  }
 
-   16.66666667% {
-      margin-left: 100%;
-   }
+  16.66666667% {
+    margin-left: 100%;
+  }
 
-   to {
-      margin-left: 100%;
-   }
+  to {
+    margin-left: 100%;
+  }
 }
-
-
 
 /* --------------- OVERVIEW --------------- */
 .overview-running-animal {
-   animation-duration: 20s;
-   animation-name: slideinoverview;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;  
+  animation-duration: 20s;
+  animation-name: slideinoverview;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .overview-running-animal-alt {
-   margin-left: -100%;
-   animation-delay: 6s;
-   animation-duration: 20s;
-   animation-name: slideinoverview;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;  
+  margin-left: -100%;
+  animation-delay: 6s;
+  animation-duration: 20s;
+  animation-name: slideinoverview;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .overview-running-animal-mobile {
-   animation-duration: 10s;
-   animation-name: slideinoverview;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;  
+  animation-duration: 10s;
+  animation-name: slideinoverview;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 .overview-running-animal-mobile-alt {
-   margin-left: -100%;
-   animation-delay: 3s;
-   animation-duration: 10s;
-   animation-name: slideinoverview;
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;  
+  margin-left: -100%;
+  animation-delay: 3s;
+  animation-duration: 10s;
+  animation-name: slideinoverview;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideinoverview {
-   from {
-      margin-left: -100%;
-   }
+  from {
+    margin-left: -100%;
+  }
 
-   50% {
-      margin-left: 100%;
-   }
+  50% {
+    margin-left: 100%;
+  }
 
-   to {
-      margin-left: 100%;
-   }
+  to {
+    margin-left: 100%;
+  }
 }
-
 
 @tailwind base;
 
 body {
-   @apply font-mono;
+  @apply font-mono;
 }
 
 button {
-   @apply focus:outline-none;
+  @apply focus:outline-none;
 }
 
 button:hover {
-   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    #24e39e 60%,
+    #24e39e
+  );
 }
 
 .btn-green:hover {
-   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    #24e39e 60%,
+    #24e39e
+  );
 }
 
 .active-button {
-   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, #24E39E 60%, #24E39E);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    #24e39e 60%,
+    #24e39e
+  );
 }
 
-input, textarea {
-   @apply border border-black;
+input,
+textarea {
+  @apply border border-black;
 }
 
 .roof {
-      width: 0; 
-      height: 0; 
-      border-left: 8rem solid transparent;
-      border-right: 8rem solid transparent;
-      border-bottom: 8rem solid black;
+  width: 0;
+  height: 0;
+  border-left: 8rem solid transparent;
+  border-right: 8rem solid transparent;
+  border-bottom: 8rem solid black;
 }
- 
+
 @responsive {
-   .inset-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  .inset-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-   .no-gray-square {
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      -webkit-tap-highlight-color: transparent;
-   }
+  .no-gray-square {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
 
-   .btn-black {
-      @apply bg-black text-white md:hover:bg-white md:hover:text-black md:hover:shadow-2xl focus:outline-none truncate;
-   }
+  .btn-black {
+    @apply bg-black text-white md:hover:bg-white md:hover:text-black md:hover:shadow-2xl focus:outline-none truncate;
+  }
 
-   .btn-red {
-      @apply text-white bg-red-500 border border-red-600 hover:text-red-500 focus:outline-none truncate;
-   }
+  .btn-red {
+    @apply text-white bg-red-500 border border-red-600 hover:text-red-500 focus:outline-none truncate;
+  }
 
-   .flex-center {
-      @apply flex justify-center items-center;
-   }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 
-   .flex-col-center {
-      @apply flex flex-col justify-center items-center;
-   }
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center;
+  }
 
-   .focus {
-      @apply focus:outline-none focus:ring-1 focus:ring-black;
-   }
+  .focus {
+    @apply focus:outline-none focus:ring-1 focus:ring-black;
+  }
 }
-
 
 .nav-icon {
-   @apply w-8 mx-8 z-50;
+  @apply w-8 mx-8 z-50;
 }
 
 .nav-icon-after,
 .nav-icon-before,
 .nav-icon-middle {
-   background-color: black;
-   border-radius: 1px;
-   content: '';
-   display: block;
-   height: 4.5px;
-   margin: 6.5px 0;
-   transition: all .2s ease-in-out;
-   z-index: 50;
+  background-color: black;
+  border-radius: 1px;
+  content: "";
+  display: block;
+  height: 4.5px;
+  margin: 6.5px 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 50;
 }
 
 .menu {
-   @apply absolute top-0 w-full flex flex-col justify-start items-center px-4 py-6 z-50;
-   height: 90vh;
-   right: -150vw;
-   transition: right .2s ease-in-out;
+  @apply absolute top-0 w-full flex flex-col justify-start items-center px-4 py-6 z-50;
+  height: 90vh;
+  right: -150vw;
+  transition: right 0.2s ease-in-out;
 }
 
 .menu.show {
-   @apply right-0;
+  @apply right-0;
 }
-
-
 
 @tailwind components;
 @tailwind utilities;

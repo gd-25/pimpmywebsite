@@ -2,15 +2,18 @@ import React, { useState, useEffect } from "react";
 import './../../styles/index.css';
 
 import GD from './../../assets/websites/GD.png'
-import AGORA from './../../assets/websites/AGORA.png'
+import MADINE from './../../assets/websites/MADINE.png'
 import SPC from './../../assets/websites/SPC.png'
 import MH from './../../assets/websites/MH.png'
 import PAON from './../../assets/websites/PAON.png'
-import TEDx from './../../assets/websites/TEDx.png'
+import UNIQUE from './../../assets/websites/UNIQUE.png'
 import EI from './../../assets/websites/EI.png'
 import HM from './../../assets/websites/HM.png'
-import COS from './../../assets/websites/COS.png'
+import FORUM from './../../assets/websites/FORUM.png'
 import RELIQUE from './../../assets/websites/RELIQUE.png'
+import TEDx from './../../assets/websites/TEDx.png'
+import AGORA from './../../assets/websites/AGORA.png'
+import GREG from './../../assets/GREG.jpg'
 
 import ProjectMini from './../utils/ProjectMini'
 import Navbar from './../utils/Navbar'
@@ -40,135 +43,68 @@ export default function Overview() {
 
          <Navbar />
 
-         <div className="px-8 md:pl-40 pt-32">
-            <h1 className="text-5xl font-black">Hello!</h1>
-            <div className="h-2" />
-            <p className="w-80 md:w-200">My name is Gregoire <br className="md:hidden" /> and I am a web developer.<br className="md:hidden" /> I grew up in the French alps and I am currently studying business at ESSEC in Paris.</p>
+         <div className="w-full flex-col-center md:flex-center pt-32 ">
+            <img src={GREG} className="w-72 h-72 object-cover mb-12 md:mb-0"></img>
 
-            <div className="h-2" />
+            <div className="pl-12">
+               <h1 className="w-80 md:w-144 text-4xl font-black">Hello there!</h1>
+               <div className="h-2" />
+               <p className="w-80 md:w-144 ">My name is Gregoire.</p>
 
-            <p className="w-80 md:w-200">For me, coding is like building virtual houses, and I love building things.</p>
+               <div className="h-2" />
 
-            <div className="h-2" />
+               <p className="w-80 md:w-144">I grew up in the French alps and I now live in Paris.</p>
 
-            <p className="w-80 md:w-200">I am proficient in React/Node.js and Wordpress and would love to help you renew or build your website.</p>
+               <div className="h-2" />
 
-            <div className="h-2" />
+               <p className="w-80 md:w-144">I learned how to code all by myself over the past 5 years because I wanted to be able to build things the way I want.</p>
 
-            <p className="w-80 md:w-200">Feel free to reach out using the contact form above!</p>
+               <div className="h-2" />
+
+               <p className="w-80 md:w-144">I can help you renew or build your website or mobile application. I am proficient in Express/Node.js, React/React Native and Wordpress/PHP.</p>
+
+               <div className="h-2" />
+
+               <p className="w-80 md:w-144">Feel free to reach out <button><a href="https://linkedin.com/in/gregoiredeshusses" target="_blank">on Linkedin</a></button>, <button><a href="https://instagram.com/pimpmywebsite" target="_blank">on Instagram</a></button> or <button><a href="mailto:gregoire@pimpmywebsite.fr">via email</a></button>.</p>
+            </div>
          </div>
 
          <div className="h-12" />
 
 
 
-         <div className="w-full hidden md:flex h-64 -mt-40">
-            <div className="w-11/12 border-b border-black h-64"></div>
-
-            <div className="relative flex justify-center items-end">
-               <div className="absolute top-0 w-56 h-56 border-l-2 border-t-2 border-black z-20" style={{ transform: "scale(1, 0.5) rotate(45deg)", marginTop: "-2.05rem" }}></div>
-               <div className="absolute top-0 mt-20 md:mr-24 w-20 h-14 border border-black"></div>
-               <div className="absolute top-0 mt-20 ml-24 w-14 h-14 border border-black"></div>
-
-               <div className="absolute top-0 mt-44 md:mr-24 w-20 h-14 border border-black"></div>
-               <div className="absolute top-0 mt-44 ml-24 w-10 h-20 border border-black"></div>
-
-               <div className="w-64 h-48 border-l border-r border-black bg-white z-10"></div>
-            </div>
-
-            <div className="w-1/12 border-b border-black h-64 bg-white z-10"></div>
-         </div>
-
-         <div className="w-full flex md:hidden h-32">
-            <div className="w-4/5 border-b border-black h-32"></div>
-
-            <div className="relative flex justify-center items-end">
-               <div className="absolute top-0 w-28 h-28 border-l-2 border-t-2 border-black z-20" style={{ transform: "scale(1, 0.5) rotate(45deg)", marginTop: "-1rem" }}></div>
 
 
-               <div className="w-32 h-24 border-l border-r border-black bg-white z-10"></div>
-            </div>
-
-            <div className="w-1/5 border-b border-black h-32 bg-white z-10"></div>
-         </div>
-
-         <div className="relative w-full hidden md:flex justify-start -mt-12">
-            <div className="overview-running-animal flex-none">
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-            </div>
-         </div>
-
-         <div className="relative w-full hidden md:flex justify-start -mt-12" style={{ transform: "scaleX(-1)" }}>
-            <div className="overview-running-animal-alt flex-none " >
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-12 object-contain" />
-            </div>
-         </div>
-
-         <div className="relative w-full flex md:hidden justify-start -mt-8">
-            <div className="overview-running-animal-mobile flex-none">
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-
-            </div>
-         </div>
-
-         <div className="relative w-full flex md:hidden justify-start -mt-8 " style={{ transform: "scaleX(-1)" }}>
-            <div className="overview-running-animal-mobile-alt flex-none" >
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-               <img src={winnerRunningSrc} className="inline-block h-8 object-contain" />
-            </div>
-         </div>
 
          <div className="hidden md:grid grid-cols-2 md:grid-cols-3 px-8 md:px-40 pt-16">
+
+
+            <ProjectMini src={UNIQUE} href="https://www.unique.eco" expo
+               title="UNIQUE"
+               line1="A mobile app"
+               line2="to find thrift shops" />
 
             <ProjectMini src={GD} href="https://gasparddeshusses.com" mern
                title="GASPARDDESHUSSES"
                line1="An online art gallery"
                line2="with an integrated eshop." />
 
-            <ProjectMini src={RELIQUE} href="https://relique.paris" wp
+            <ProjectMini src={FORUM} href="https://forum-am.fr" expo
+               title="FORUM ARTS ET MÉTIERS"
+               line1="A mobile app"
+               line2="for a student forum" />
+
+            <ProjectMini src={MADINE} href="https://madine-france.com" wp
+               title="MADINE FRANCE"
+               line1="A directory of"
+               line2="Made in France brands" />
+
+            <ProjectMini src={RELIQUE} href="/projects/relique" wp
                title="RELIQUE PARIS"
                line1="A Parisian vintage"
                line2="store eshop." />
 
-            <ProjectMini src={AGORA} href="https://agoraicp.fr" wp
-               title="AGORA ICP"
-               line1="A student-ran"
-               line2="news outlet." />
-
-            <ProjectMini src={SPC} href="https://six-pairecreative.com" react
+            <ProjectMini src={SPC} href="/projects/six-paire-creative" react
                title="SIX PAIRE CREATIVE"
                line1="An interactive portfolio"
                line2="for two French publicists." />
@@ -178,14 +114,14 @@ export default function Overview() {
                line1="A clothing and"
                line2="accessories brand eshop." />
 
-            <ProjectMini src={PAON} href="https://joinpaon.com" html
+            <ProjectMini src={PAON} href="/projects/paon" html
                title="PAON"
                line1="An online platform"
                line2="landing page." />
 
             <ProjectMini src={TEDx} href="https://tedxessecbusinessschool.fr" html
                title="TEDxESSEC"
-               line1="A privileged digital"
+               line1="An online portal with"
                line2="access to conferences." />
 
             <ProjectMini src={EI} href="https://essecinitiatives.io" html
@@ -193,15 +129,15 @@ export default function Overview() {
                line1="A student consulting"
                line2="association website." />
 
-            <ProjectMini src={COS} href="https://lacageosport.com" woo
-               title="LA CAGE Ô SPORT"
-               line1="A local sports shop"
-               line2="online boutique." />
+            <ProjectMini src={AGORA} href="/projects/agora-icp" wp
+               title="AGORA ICP"
+               line1="A student-ran"
+               line2="news outlet." />
 
-            <ProjectMini src={HM} html
+            <ProjectMini src={HM} href="/projects/hannetons-magazine" html
                title="HANNETONS MAG"
-               line1="A magazine launch"
-               line2="landing page." />
+               line1="A landing page"
+               line2="for a magazine launch." />
 
 
          </div>
@@ -210,70 +146,3 @@ export default function Overview() {
    );
 }
 
-
-/*
-<img src={SEA} className="rounded-full w-64 h-64 object-cover" />
-<span className="item-collection-2">
-
-               <ProjectMini src={PAON} href="https://joinpaon.com" html
-                  title="PAON"
-                  line1="An online platform"
-                  line2="landing page." />
-
-                  <ProjectMini src={TEDx} href="https://tedxessecbusinessschool.fr" html
-                  title="TEDxESSEC"
-                  line1="A TEDx event website"  />
-
-                  <ProjectMini src={GD} href="https://gasparddeshusses.com" mern
-                  title="GASPARD DESHUSSES"
-                  line1="An art gallery website"
-                  line2="with an integrated eshop." />
-
-                  <ProjectMini src={AGORA} href="https://agoraicp.fr" wp
-                  title="AGORA ICP"
-                  line1="A student-ran"
-                  line2="media website." />
-
-                  <ProjectMini src={MH} href="https://maisonhouni.com" woo
-                  title="MAISON HOUNI"
-                  line1="An online boutique"
-                  line2="eshop and showroom." />
-
-                  <ProjectMini src={EI} href="https://essecinitiatives.io" html
-                   title="ESSEC INITIATIVES"
-                   line1="A consulting student"
-                   line2="association website." />
-
-                  <ProjectMini src={HM}
-                  title="HANNETONS MAGAZINE"
-                  line1="A magazine launch"
-                  line2="landing page." />
-
-               </span>
-
-
-
-
-<div className="flex flex-nowrap overflow-x-hidden"  style={{ width: "200%", animation: "moveSlideshow 20s linear infinite" }}>
-            <img src={GD} className="w-80 object-contain border-2 border-transparent hover:border-black"  />
-            <img src={MH} className="w-80 object-contain border-2 border-transparent hover:border-black" />
-            <img src={TEDx} className="w-80 object-contain  border-2 border-transparent hover:border-black" />
-            <img src={AGORA} className="w-80 object-contain border-2 border-transparent hover:border-yellow-500" />
-            <img src={GD} className="w-80 object-contain border-2 border-transparent hover:border-black" />
-            <img src={MH} className="w-80 object-contain border-2 border-transparent hover:border-black" />
-            <img src={TEDx} className="w-80 object-contain  border-2 border-transparent hover:border-black" />
-            <img src={AGORA} className="w-80 object-contain border-2 border-transparent hover:border-yellow-500" />
-            <img src={GD} className="w-80 object-contain border-2 border-transparent hover:border-black" />
-            <img src={MH} className="w-80 object-contain border-2 border-transparent hover:border-black" />
-            <img src={TEDx} className="w-80 object-contain  border-2 border-transparent hover:border-black" />
-            <img src={AGORA} className="w-80 object-contain border-2 border-transparent hover:border-yellow-500" />
-
-         </div>
-
-
- <div className="ml-88">
-            <h1 className="text-7xl font-black">On change tout?</h1>
-            <div className="h-5" />
-            <h2>Votre site internet à la carte, en deux semaines. Top chronos.</h2>
-         </div>
-          */
