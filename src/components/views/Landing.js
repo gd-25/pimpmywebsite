@@ -91,7 +91,7 @@ export default function Landing() {
                      line2="with an integrated eshop."
                      toDoWhenLoaded={() => setImg2loaded(true)} />
 
-                  <ProjectPreview src={FORUM} href="https://forum-am.fr" expo
+                  <ProjectPreview src={FORUM} href="https://apps.apple.com/fr/app/forum-arts-et-metiers/id6443579765" expo
                      title="FORUM ARTS ET MÉTIERS"
                      line1="A mobile app"
                      line2="for a student forum"
@@ -153,7 +153,7 @@ export default function Landing() {
                      line1="An online art gallery"
                      line2="with an integrated eshop." />
 
-                  <ProjectPreview src={FORUM} href="https://forum-am.fr" expo
+                  <ProjectPreview src={FORUM} href="https://apps.apple.com/fr/app/forum-arts-et-metiers/id6443579765" expo
                      title="FORUM ARTS ET MÉTIERS"
                      line1="A mobile app"
                      line2="for a student forum" />
@@ -214,10 +214,6 @@ export default function Landing() {
                </div>
             </div>
 
-            {/* <a href="https://relique.paris" target="_blank">
-               <img alt="" src={RELIQUE} className="w-full object-top h-56 object-cover" />
-            </a> */}
-
             <ProjectMini src={UNIQUE} href="https://www.unique.eco" expo
                title="UNIQUE"
                line1="A mobile app"
@@ -229,12 +225,10 @@ export default function Landing() {
                </div>
             </div>
 
-            <ProjectMini src={GD} href="https://gasparddeshusses.com" mern
-               title="GASPARDDESHUSSES"
-               line1="An online art gallery"
-               line2="with an integrated eshop." />
-
-
+            <ProjectMini src={FORUM} href="https://apps.apple.com/fr/app/forum-arts-et-metiers/id6443579765" expo
+               title="FORUM ARTS ET MÉTIERS"
+               line1="A mobile app"
+               line2="for a student forum" />
 
             <div className="relative pt-4 w-full flex justify-start ">
                <div className="running-animal-mobile running-animal-mobile-three flex-none" >
@@ -242,10 +236,10 @@ export default function Landing() {
                </div>
             </div>
 
-            <ProjectMini src={FORUM} href="https://forum-am.fr" expo
-               title="FORUM ARTS ET MÉTIERS"
-               line1="A mobile app"
-               line2="for a student forum" />
+            <ProjectMini src={GD} href="https://gasparddeshusses.com" mern
+               title="GASPARDDESHUSSES"
+               line1="An online art gallery"
+               line2="with an integrated eshop." />
 
             <div className="relative pt-4 w-full flex justify-start " style={{ transform: "scaleX(-1)" }}>
                <div className="running-animal-mobile running-animal-mobile-four flex-none" >

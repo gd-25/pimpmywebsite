@@ -89,7 +89,7 @@ export default function Overview() {
                line1="An online art gallery"
                line2="with an integrated eshop." />
 
-            <ProjectMini src={FORUM} href="https://forum-am.fr" expo
+            <ProjectMini src={FORUM} href="https://apps.apple.com/fr/app/forum-arts-et-metiers/id6443579765" expo
                title="FORUM ARTS ET MÉTIERS"
                line1="A mobile app"
                line2="for a student forum" />
